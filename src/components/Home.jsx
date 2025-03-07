@@ -4,8 +4,8 @@ import bg_video from '../assets/video'
 function Home() {
 
   return (
-    <section className="">
-      <video id='bg_video' className='opacity-20' autoPlay loop muted playsInline>
+    <section className="relative h-screen">
+      <video id='bg_video' className='opacity-20 absolute inset-0 w-full h-full object-cover z-0' autoPlay loop muted playsInline>
         <source src={bg_video}/>
       </video>
       <div className="containe text-center w-full h-[100%] absolute text-white top-0 flex flex-col justify-center items-center ">
@@ -14,7 +14,7 @@ function Home() {
             Hi, I'm Abhay Vashishth
           </h1>
           <p className="text-lg text-white mb-8">
-            A passionate web developer creating modern and responsive web applications.
+            A frontend web developer creating modern and responsive web applications.
           </p>
           <div className="flex justify-center space-x-4">
             <a
