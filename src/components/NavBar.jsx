@@ -78,7 +78,7 @@ const {setContactVisible} = useContext(B2BContext)
 </button>
 
 <div className='relative group '>
-<div className="absolute inset-0 bg-purple-300 rounded-lg blur-sm group-hover:blur-lg transition-all duration-500"></div>
+<div className="absolute inset-0 bg-purple-300 rounded-lg blur-xs group-hover:blur-sm transition-all duration-500"></div>
 <button onClick={()=>{
   setContactVisible(true);
   setVisible(false);

@@ -5,7 +5,7 @@ import { B2BContext } from '../contexts/B2BContext';
 const ContactMe = () => {
   const {setContactVisible} = useContext(B2BContext)
   return (
-    <div className="bg-gray-100 lg:py-7 fixed top-20 right-10 rounded-xl z-2 sm:min-w-[500px] min-w-3/4 max-h-[60%] sm:max-h-[55%] lg:min-w-[670px] lg:max-h-[60%] border-1 border-black">
+    <div className="bg-gray-100 lg:py-7 fixed top-20 right-5 rounded-xl z-2 sm:min-w-[500px] min-w-3/4 max-h-[60%] sm:max-h-[55%] lg:min-w-[670px] lg:max-h-[60%] border-1 border-black">
       <button onClick={()=>setContactVisible(false)} className='absolute top-1 left-1 cursor-pointer'><img className='w-7 ' src={assets.cross_icon_2} alt="" /></button>
        <form className='px-4 py-3 w-full flex flex-col sm:items-center gap-10'>
           <h1 className='font-extrabold text-3xl w-full text-center'>Contact Me</h1>
@@ -34,7 +34,7 @@ const ContactMe = () => {
              </div>
 
           </div>
-          <button className='bg-blue-700 hover:bg-blue-800 cursor-pointer rounded-xl text-center text-white p-3' type="submit">Send Messsage</button>
+          <button className='bg-blue-700 hover:bg-blue-800 cursor-pointer rounded-xl text-center text-white p-3 mb-5 sm:mb-0' type="submit">Send Messsage</button>
        </form>
     </div>
   );
