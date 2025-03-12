@@ -1,19 +1,23 @@
 import React from 'react'
 
 
-function ProjectTile({image,title,description, id, link}) {
+function ProjectTile({image,title,description, link}) {
 
   return (
-   <a target='_blank' href={`${link}`} className=' text-white cursor-pointer w-3/4' >
-    <div className='overflow-hidden flex flex-col items-center gap-3 hover:outline-3 outline-purple-600 rounded-2xl'>
-      <img className={`w-full ${id === 'passgen' ? 'sm:h-[250px] ' : '' }`} id={`${id}`} src={image} alt="" />
-        <div className='flex flex-col items-center gap-2 p-4'>
-           <p className='pt-3 pb-1 text-sm text-yellow-500 font-medium'> {title} </p>
-           <p className='text-sm font-light' >{description}</p>
+  <div class="group flex flex-col relative hover:scale-110 transition-all duration-500 text-[#F9F9F9] rounded cursor-pointer w-1/5">
+      <a href={link}>
+
+        <div class="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-500 rounded-lg">
         </div>
-    </div>
-    
-   </a>
+
+        <img src={image} alt="" class="rounded-lg" />
+
+          <div class="invisible group-hover:visible absolute right-4 bottom-5 transition-all duration-500 z-50 flex flex-col justify-center items-center">
+            <p class="text-[18px] md:text-2xl"> {title} </p>
+            <p class="text-[10px] md:text-[12px] text-start mx-3"> {description} </p>
+          </div>
+       </a>
+   </div>
   )
 }
 

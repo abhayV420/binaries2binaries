@@ -8,7 +8,7 @@ function About() {
 
       <Line/>
 
-      <div className="container px-4 mt-20">
+      <div className="container px-4 mt-10">
         <h2 className="text-3xl font-semibold text-center mb-8 text-white">About Me</h2>
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-lg text-white mb-3">

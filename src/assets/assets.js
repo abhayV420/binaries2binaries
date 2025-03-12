@@ -18,6 +18,8 @@ import ln_icon from './social/ln_logo.png'
 import x_icon from './social/x_logo.jpg'
 import more_icon from './social/more_icon.png'
 import github_icon from './social/github-logo.png'
+import ecommerceImg from './projects/ecommerce.jpg'
+import todosImg from './projects/todos.jpg'
 
 export const assets = {
     hero_bg,
@@ -34,7 +36,9 @@ export const assets = {
     vastra,
     github_icon,
     b2b_logo,
-    cross_icon_2
+    cross_icon_2,
+    ecommerceImg,
+    todosImg
     
     
 }

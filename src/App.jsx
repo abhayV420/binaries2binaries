@@ -9,13 +9,16 @@ import {Element} from 'react-scroll'
 import { useContext } from 'react'
 import B2BContextProvider, { B2BContext } from './contexts/B2BContext'
 import ContactMe from './pages/ContactMe'
+import SocialMediaSection from './components/SocialMediaSection'
+
 
 function App() {
-  const {contactVisible} = useContext(B2BContext)
+  const {contactVisible} = useContext(B2BContext);
   return (
     <div className='w-full flex flex-col gap-2 bg-gray-900 '>
      <ToastContainer/>
       <NavBar/>
+      <SocialMediaSection/>
       {
         contactVisible ? <ContactMe/> : null
       }

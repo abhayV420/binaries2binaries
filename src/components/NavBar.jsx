@@ -1,5 +1,4 @@
-import React, { useContext} from 'react'
-import { useState } from 'react'
+import React, { useContext } from 'react'
 import {assets} from "../assets/assets"
 import { Link, animateScroll } from 'react-scroll'
 import { B2BContext } from '../contexts/B2BContext'
@@ -11,8 +10,7 @@ import { B2BContext } from '../contexts/B2BContext'
 
 const Navbar= () => {
   
-const [visible, setVisible] = useState(false);
-const [navVisible, setNavVisible] = useState(false);
+const {visible, setVisible, navVisible, setNavVisible} = useContext(B2BContext);
 const {setContactVisible} = useContext(B2BContext)
 
   
@@ -25,7 +23,7 @@ const {setContactVisible} = useContext(B2BContext)
        
          
       {/* Left Part */}
-      <Link to="/" className='sm:ml-2 lg:ml-6 ml-1 cursor-pointer rounded-full'> <img className='sm:w-15 w-12' src={assets.b2b_logo} alt="" /> </Link>
+      <Link to="/" className='cursor-pointer rounded-full'> <img className='sm:w-10 w-8' src={assets.b2b_logo} alt="" /> </Link>
 
       {/* Middle Part */}
       <ul className='hidden sm:flex lg:gap-12 sm:gap-5 gap-4 lg:text-2xl text-sm text-white'>
@@ -47,26 +45,12 @@ const {setContactVisible} = useContext(B2BContext)
       </Link>
 
 </ul>
-        {/* Social Media */}
+        
 
   <div className='flex gap-4 items-center'>
+   {/* for smaller acreens */}
 
-     <div className='lg:flex gap-2 hidden'>
-
-        <a target='_blank' href='https://www.linkedin.com/in/abhay-vashishth-422917349?'  className='sm:w-6 lg:w-7'><img className=' rounded-full w-full hover:scale-105 transition ease-in-out' src={assets.ln_icon} alt="" /> </a>
-
-        <a target='_blank' href='https://x.com/abhayvashishthh?t=r_pKK4bjaI8Sd0OtuPH_-A&s=03'  className='sm:w-7 lg:w-8'><img className=' rounded-full w-full hover:scale-105 transition ease-in-out' src={assets.x_icon} alt="" /> </a>
-
-        <a target='_blank' href='https://github.com/abhayV420'  className='sm:w-6 lg:w-7'>
-            <img src={assets.github_icon} className=' rounded-full w-full hover:scale-105 transition ease-in-out  ' alt="" />
-            {/* <p className='absolute text-[12px] text-center right-[-5px] bottom-[-5px] w-4 leading-4 bg-red-500 text-white aspect-square rounded-full s '> </p> */}
-            </a>
-
-     </div>
-
-{/* for smaller acreens */}
-
-<div className='w-8 min-w-6 lg:hidden block bg-white rounded-full border hover:border-purple-600'>
+<button className='w-8 min-w-6 lg:hidden block bg-white rounded-full border hover:border-purple-600'>
     <div onClick={()=>{
     setVisible(!visible);
     setNavVisible(false);
@@ -76,25 +60,25 @@ const {setContactVisible} = useContext(B2BContext)
 
        <a onClick={()=>setVisible(false)} href='https://www.linkedin.com/in/abhay-vashishth-422917349?' target='_blank'  className='text-white flex items-center gap-5 group cursor-pointer'>
        <img className='w-8 border group-hover:border-purple-600 rounded-full' src={assets.ln_icon} alt="" />
-       <p className='w-2/3 group-hover:text-yellow-500'>LINKED IN</p>
+       <p className='w-2/3 group-hover:text-yellow-500 text-start'>LINKED IN</p>
        </a>
 
        <a onClick={()=>setVisible(false)} href='https://x.com/abhayvashishthh?t=r_pKK4bjaI8Sd0OtuPH_-A&s=03' target='_blank' 
         className='text-white flex items-center gap-5 group cursor-pointer'>
        <img className='w-8 border group-hover:border-purple-600 rounded-full' src={assets.x_icon} alt="" />
-       <p className='w-2/3 group-hover:text-yellow-500'>X</p>
+       <p className='w-2/3 group-hover:text-yellow-500 text-start'>X/Twitter</p>
        </a>
 
        <a onClick={()=>setVisible(false)} href='https://github.com/abhayV420' target='_blank'  className='text-white flex items-center gap-5 group cursor-pointer'>
        <img className='w-8 border group-hover:border-purple-600 rounded-full' src={assets.github_icon} alt="" />
-       <p className='w-2/3 group-hover:text-yellow-500'>GITHUB</p>
+       <p className='w-2/3 group-hover:text-yellow-500 text-start'>GITHUB</p>
        </a>
   </div>
 
-</div>
+</button>
 
 <div className='relative group '>
-<div className="absolute inset-0 bg-pink-600 rounded-lg blur-sm group-hover:blur-lg transition-all duration-500"></div>
+<div className="absolute inset-0 bg-purple-300 rounded-lg blur-sm group-hover:blur-lg transition-all duration-500"></div>
 <button onClick={()=>{
   setContactVisible(true);
   setVisible(false);

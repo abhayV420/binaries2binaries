@@ -34,7 +34,7 @@ const ContactMe = () => {
              </div>
 
           </div>
-          <button className='bg-blue-700 rounded-xl text-center text-white p-3' type="submit">Send Messsage</button>
+          <button className='bg-blue-700 hover:bg-blue-800 cursor-pointer rounded-xl text-center text-white p-3' type="submit">Send Messsage</button>
        </form>
     </div>
   );
