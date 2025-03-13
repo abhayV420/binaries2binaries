@@ -1,6 +1,8 @@
 import { FaGithub } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa6"; 
+import { FaLinkedin } from "react-icons/fa6";
+import { FaMedium } from "react-icons/fa6";
+import { FaUser} from "react-icons/fa"; 
 import IconButton from "./IconButton";
 
 function SocialMediaSection() {
@@ -11,20 +13,30 @@ function SocialMediaSection() {
 
         <div className="mb-4">
            <IconButton text="Github">
-             <FaGithub size={20}  />
+             <FaGithub size={18}  />
            </IconButton>
         </div>
         
         
        <div className="mb-4">
           <IconButton text="Twitter" >
-             <FaXTwitter size={20} />
+             <FaXTwitter size={18} />
           </IconButton>
        </div>
 
-       <div>
+       <div className="mb-4">
         <IconButton text="LinkedIn">
-            <FaLinkedin size={20}/>
+            <FaLinkedin size={18}/>
+        </IconButton>
+       </div>
+       <div className="mb-4">
+        <IconButton text="Medium">
+            <FaMedium size={18}/>
+        </IconButton>
+       </div>
+       <div className="mb-4">
+        <IconButton text="LinkedIn">
+            <FaUser size={18}/>
         </IconButton>
        </div>
         

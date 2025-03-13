@@ -7,7 +7,10 @@ function Projects() {
  
   return (
     <div className='flex flex-col items-center mt-40 mx-8'>
-          <div className='flex flex-col sm:flex-row gap-16 justify-around items-center mt-20'>
+      <div className="">
+        <p className="inline text-2xl sm:text-3xl border-b-3 border-[#464643] font-medium py-3 text-gray-300">PROJECTS</p>
+        </div>
+          <div className='flex flex-col sm:flex-row gap-20 md:gap-40 justify-center items-center mt-20'>
         {
         projects.map((item, index)=>(
           <ProjectTile key={index} image={item.image} title={item.title} description={item.description} link={item.ref} />

@@ -18,14 +18,14 @@ function Home() {
       <div className="text-center w-full h-[100%] absolute text-white top-0 flex flex-col justify-center items-center ">
 
         <div className="max-w-3xl ml-4 ">
-          <h1 className="text-2xl font-medium text-gray-300 mb-2 text-start">
+          <h1 className="text-2xl font-medium text-gray-300 mb-2 text-start ml-8 sm:ml-0">
             Hi, my name is
           </h1>
           
-           <p className="text-4xl md:text-4xl font-bold text-purple-600 mb-1 text-start">
+           <p className="text-4xl md:text-4xl font-bold text-purple-600 mb-1 text-start ml-8 sm:ml-0">
              Abhay Vashishth
           </p>
-          <h1 className="text-4xl md:text-4xl font-bold text-gray-300 mb-4 text-start">
+          <h1 className="text-4xl md:text-4xl font-bold text-gray-300 mb-4 text-start ml-8 sm:ml-0">
              I'm a 
              <span className='font-bold text-yellow-500'>
               {text}
@@ -34,7 +34,7 @@ function Home() {
              <Cursor/>
              </span>
           </h1>
-          <p className="text-lg text-gray-200 mb-8">
+          <p className="text-lg text-gray-200 mb-8 text-start  ml-8 sm:ml-0 ">
             A frontend web developer creating modern and responsive web applications.
           </p>
           <div className="flex justify-center space-x-4">

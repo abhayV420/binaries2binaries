@@ -83,7 +83,7 @@ const {setContactVisible} = useContext(B2BContext)
   setContactVisible(true);
   setVisible(false);
   setNavVisible(false)
-}} className='lg:w-[170px] sm:w-36 w-20 text-center lg:py-3 py-2 sm:text-2xl text-sm max-h-14 text-white rounded-lg hover:border-purple-600 leading-none relative bg-black'>CONTACT</button>
+}} className='lg:w-[170px] sm:w-36 w-20 text-center lg:py-3 py-2 cursor-pointer sm:text-2xl text-sm max-h-14 text-white rounded-lg hover:border-purple-600 leading-none relative bg-black'>CONTACT</button>
 </div>
 
 <div className='bg-white border hover:border-purple-700 rounded-full'> <img onClick={()=>{

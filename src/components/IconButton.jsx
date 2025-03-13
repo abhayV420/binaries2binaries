@@ -7,7 +7,7 @@ export default function IconButton({ children, text, color, ...props }) {
         <button
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            className={`flex p-2 items-center rounded-lg text-white ${color || "bg-transparent"} border-1 border-purple-300`}
+            className={`flex p-2 items-center rounded-lg text-white ${color || "bg-transparent"} border-1 border-purple-300 cursor-pointer`}
 
             {...props}>
             {children}
